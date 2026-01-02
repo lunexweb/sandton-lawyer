@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-16 sm:pb-20 lg:pb-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-24 sm:pb-20 lg:pb-12">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center w-full">
           {/* Text Content - Mobile First, Desktop Left */}
           <div className="w-full max-w-xl mx-auto lg:mx-0 text-center lg:text-left order-1 lg:order-1 space-y-4 sm:space-y-5">
@@ -66,6 +66,7 @@ const Hero = () => {
               </span>
             </div>
             
+            {/* Image Container */}
             <div className="relative">
               <div className="absolute -inset-2 sm:-inset-3 lg:-inset-4 bg-gradient-to-br from-grey-light/20 to-transparent rounded-xl sm:rounded-2xl blur-xl" />
               <img
@@ -74,12 +75,22 @@ const Hero = () => {
                 className="relative w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-auto rounded-xl sm:rounded-2xl shadow-2xl object-cover"
               />
             </div>
+            
+            {/* Lawyer Name - Separate container below image */}
+            <div className="text-center mt-4 sm:mt-5 lg:mt-6 w-full mb-8 sm:mb-0">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-semibold text-primary-foreground leading-tight">
+                Aadil Mohideen
+              </h3>
+              <p className="text-sm sm:text-base text-primary-foreground/80 mt-2 sm:mt-2.5 font-medium">
+                Attorney at Law
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 sm:bottom-8 lg:bottom-4 left-1/2 -translate-x-1/2 fade-in opacity-0 stagger-5 w-auto z-20">
+      {/* Scroll Indicator - Hidden on mobile to avoid overlap */}
+      <div className="hidden sm:flex absolute bottom-6 sm:bottom-8 lg:bottom-4 left-1/2 -translate-x-1/2 fade-in opacity-0 stagger-5 w-auto z-20">
         <a
           href="#about"
           className="flex flex-col items-center text-primary-foreground/50 hover:text-primary-foreground/70 transition-colors"
